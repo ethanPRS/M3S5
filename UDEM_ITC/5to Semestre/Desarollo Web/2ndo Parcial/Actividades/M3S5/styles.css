@@ -1,0 +1,14 @@
+body {
+    height: 100hv;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header"
+    "aside  main"
+    "aside  main"
+    "footer footer";
+    gap: 5px;
+
+
+}
