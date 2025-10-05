@@ -1,14 +1,56 @@
 body {
-    height: 100hv;
+    margin: 0;
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 60px 1fr 1fr 1fr 60px;
     grid-template-areas: 
-    "header header"
-    "aside  main"
-    "aside  main"
-    "footer footer";
+    "header header header"
+    "aside  main   wildcar1"
+    "aside  main   wildcar2"
+    "aside  main   wildcar3"
+    "footer footer footer";
     gap: 5px;
+}
 
+header {
+    grid-area: header;
+    background: rgb(52, 123, 230);
+}
 
+aside {
+    grid-area: aside;
+    background-color: skyblue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: grey;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(195, 213, 220);
+}
+
+.wildcar1 {
+    grid-area: wildcar1;
+    background: greenyellow;
+}
+
+.wildcar2 {
+    grid-area: wildcar2;
+    background: greenyellow;
+}
+
+.wildcar3 {
+    grid-area: wildcar3;
+    background: greenyellow;
+}
+
+header, aside, main, .wildcar1, .wildcar2, .wildcar3, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
